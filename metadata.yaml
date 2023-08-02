@@ -1,0 +1,17 @@
+# This file populates the Overview on Charmhub.
+# See https://juju.is/docs/sdk/metadata-reference for a checklist and guidance.
+
+# The charm package name, no spaces (required)
+# See https://juju.is/docs/sdk/naming#heading--naming-charms for guidance.
+name: practice-charm
+ 
+# The following metadata are human-readable and will be published prominently on Charmhub.
+
+# (Recommended)
+display-name: Charm Template
+
+# (Required)
+summary: A simple cmatrix charm.
+
+description: |
+  Deploy a simple charm that installs cmatrix and confirms is has been installed
