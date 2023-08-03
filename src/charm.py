@@ -27,7 +27,6 @@ logger = logging.getLogger(__name__)
 
 
 class PracticeCharmCharm(CharmBase):
-    _stored = StoredState()
 
     def __init__(self, *args):
         super().__init__(*args)
