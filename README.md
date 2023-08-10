@@ -13,7 +13,7 @@ Use links instead.
 Charmhub package name: operator-template
 More information: https://charmhub.io/practice-charm
 
-Describe your charm in one or two sentences.
+This is a charm to run a basic CLI application called cmatrix. It basically just prints random characters to the terminal
 
 ## Other resources
 
