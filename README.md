@@ -17,10 +17,10 @@ This is a charm to run a basic CLI application called cmatrix. It basically just
 
 ## Other resources
 
-<!-- If your charm is documented somewhere else other than Charmhub, provide a link separately. -->
+<!-- If your charm is documented somewhere else other than Charmhub, provide a link separately. 
 
 - [Read more](https://example.com)
 
-- [Contributing](CONTRIBUTING.md) <!-- or link to other contribution documentation -->
+- [Contributing](CONTRIBUTING.md) <!-- or link to other contribution documentation 
 
-- See the [Juju SDK documentation](https://juju.is/docs/sdk) for more information about developing and improving charms.
+- See the [Juju SDK documentation](https://juju.is/docs/sdk) for more information about developing and improving charms. -->
