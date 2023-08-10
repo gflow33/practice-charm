@@ -15,6 +15,7 @@ https://juju.is/docs/sdk/create-a-minimal-kubernetes-charm
 import logging
 import os
 import shutil
+import subprocess
 
 from ops.charm import CharmBase
 from ops.framework import StoredState
@@ -48,7 +49,8 @@ class PracticeCharmCharm(CharmBase):
 
     def _on_start(self, event):
         logger.info(f"Starting cmatrix")
-        os.system('cmatrix')
+        subprocess.Popen(['cmatrix'])
+        # os.system('cmatrix')
         if not os.system('apt list | grep cmatrix') == 0:
             logger.info("cmatrix is not installed")
             self.unit.status = MaintenanceStatus("Not installed.")
@@ -58,8 +60,20 @@ class PracticeCharmCharm(CharmBase):
 
     def _on_stop(self, event):
         logger.info(f"Stopping cmatrix")
-        shutil.copyfile('bash/cmatrix.sh', '~')
-        os.system('bash cmatrix.sh')
+    #     source_path = 'bash/cmatrix.sh'
+    #     destination_path = os.path.expanduser('~/cmatrix.sh')
+
+    # try:
+    #     shutil.copyfile(source_path, destination_path)
+    #     os.system('bash ~/cmatrix.sh')
+    # except FileNotFoundError:
+    #     logger.error(f"Source file '{source_path}' not found.")
+    # except Exception as e:
+        # logger.error(f"An error occurred: {e}")
+        # 
+        shutil.copy('script/cmatrix.sh', os.path.expanduser('~/cmatrix.sh'))
+        os.system('bash ~/cmatrix.sh')
+            
 
 if __name__ == "__main__": 
     main(PracticeCharmCharm)
